@@ -1,0 +1,174 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Main Container */
+#container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left Side */
+#left-side {
+    width: 50%;
+    background-color: #2d2d2d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Snake lines (circles) */
+.snake-line {
+    position: absolute;
+    width: 120px;  /* Increased size */
+    height: 120px; /* Increased size */
+    background: none;
+    border: 4px solid #00b300;  /* Slightly thicker border */
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/* Circle 1 */
+.snake-line:nth-child(1) { top: 10%; left: 5%; }
+/* Circle 2 */
+.snake-line:nth-child(2) { top: 15%; left: 20%; }
+/* Circle 3 */
+.snake-line:nth-child(3) { top: 20%; left: 40%; }
+/* Circle 4 */
+.snake-line:nth-child(4) { top: 30%; left: 70%; }
+/* Circle 5 */
+.snake-line:nth-child(5) { top: 50%; left: 10%; }
+/* Circle 6 */
+.snake-line:nth-child(6) { top: 60%; left: 60%; }
+/* Circle 7 */
+.snake-line:nth-child(7) { top: 75%; left: 80%; }
+
+@keyframes snakeMove {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(50px, -50px) rotate(45deg);
+    }
+    50% {
+        transform: translate(-60px, 60px) rotate(90deg);
+    }
+    75% {
+        transform: translate(60px, 30px) rotate(135deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(180deg);
+    }
+}
+
+/* Left Side Content */
+#left-side h1 {
+    font-size: 50px;
+    color: #00b300;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.slogan {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* Right Side (Login Form) */
+#right-side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#login-box {
+    width: 80%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+#login-box h2 {
+    color: #00b300;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#login-box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#login-box button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00b300;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-box button:hover {
+    background-color: #008c00;
+}
+
+#login-options {
+    margin-top: 20px;
+}
+
+#login-options a {
+    color: #00b300;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#login-options a:hover {
+    text-decoration: underline;
+}
+
+#login-options p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#login-options span {
+    color: #00b300;
+    cursor: pointer;
+}
+
+#login-options span:hover {
+    text-decoration: underline;
+}
